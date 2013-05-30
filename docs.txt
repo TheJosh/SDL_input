@@ -1,0 +1,24 @@
+Group
+	one or more
+	multiple can be applied at a time
+	e.g. player 1, player 2
+	contains zero or more profiles
+	has a user pointer (void *), passed in event structure
+	do we need this? might be overkill, or easily implemented in user code
+	just have profiles of p1_ground, p2_ground, p1_driving, p2_driving, etc
+	
+Profile
+	one or more
+	only one at a time
+	can be changed to be a different profile per ???
+	e.g. ground, driving, flying
+	contains zero or more bindings
+	has some extra settings too (e.g. sensitivity, accel, etc)
+	has a user pointer (void *), passed in event structure
+	
+Binding
+	connects a key, mouse axis or joystick axis
+	can be analog or digital
+	can bind to a handler or a float-pointer/bool-pointer or both
+	has a user pointer (void *), passed in event structure
+	e.g. "W" -> binary moveup, "S" -> binary movedown, "Mouse X" -> analog lookx
